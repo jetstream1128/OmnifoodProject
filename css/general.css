@@ -1,0 +1,236 @@
+/* :root {
+	--text-white: #fff;
+	--text-white-darker: #ddd;
+	--text-gray-1: #555;
+	--text-gray-2: #333;
+	--text-gray-3: #6f6f6f;
+
+	--primary: #e67e22;
+	--primary-tint-1: #fdf2e9;
+	--primary-tint-2: #fae5d3;
+	--primary-tint-3: #eb984e;
+
+	--primary-trans: rgba(230, 125, 34, 0.35);
+  --primary-trans-05:rgba(230, 125, 34, 0.5);
+	--primary-tint-3-trans: rgba(235, 151, 78, 0.35);
+
+
+	--primary-shade-1: #cf711f;
+	--primary-shade-2: #45260a;
+	--primary-shade-3: #2e1907;
+
+	--tag-vegetarian: #51cf66;
+	--tag-vegan: #94d82d;
+	--tag-paleo: #ffd43b;
+} */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	/* font-size: 10px; */
+	font-size: 62.5%; /*10px*/
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Rubik", sans-serif;
+	line-height: 1;
+	font-weight: 400;
+	color: var(--text-gray-1);
+	overflow-x: hidden;
+}
+
+/* ************************************************************ */
+/* GENERAL REUSABLE COMPONENTS */
+/* ************************************************************ */
+.container {
+	max-width: 120rem;
+	padding: 0 3.2rem;
+	margin: 0 auto;
+}
+
+.subheading {
+	display: block;
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: var(--primary-shade-1);
+	text-transform: uppercase;
+	margin-bottom: 1.6rem;
+	letter-spacing: 0.75px;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+	font-weight: 700;
+	letter-spacing: -0.5px;
+	color: var(--text-gray-2);
+}
+
+.heading-primary {
+	font-size: 5.2rem;
+	line-height: 1.05;
+	padding-bottom: 3.2rem;
+}
+
+.heading-secondary {
+	font-size: 4.4rem;
+	line-height: 1.2;
+	margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+	font-size: 3rem;
+	line-height: 1.2;
+	margin-bottom: 3.2rem;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+	display: inline-block;
+
+	text-decoration: none;
+	font-size: 2rem;
+	font-weight: 600;
+	padding: 1.6rem 3.2rem;
+	border-radius: 9px;
+
+	/* Put transition on original "state" */
+	transition: background-color 0.3s, box-shadow 0.3s;
+
+	/* only for .btn */
+	border: none;
+	cursor: pointer;
+}
+
+.btn--form {
+	align-self: end;
+	background-color: var(--primary-shade-3);
+	color: var(--primary-tint-1);
+	padding: 1.2rem;
+}
+
+.btn--form:hover {
+	background-color: var(--text-white);
+	color: var(--text-gray-1);
+}
+
+.btn--full:link,
+.btn--full:visited {
+	background-color: var(--primary);
+	color: var(--text-white);
+}
+.btn--full:hover,
+.btn--full:active {
+	background-color: var(--primary-shade-1);
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+	background-color: var(--text-white);
+	color: var(--text-gray-2);
+}
+.btn--outline:hover,
+.btn--outline:active {
+	background-color: var(--primary-tint-1);
+
+	/* trick for inside border */
+	box-shadow: inset 0 0 0 3px var(--text-white);
+}
+
+.link:link,
+.link:visited {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--primary);
+	border-bottom: 1px solid currentColor;
+	padding-bottom: 0.2rem;
+	transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+	border-bottom: 1px solid transparent;
+}
+
+.list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+}
+
+.list-icon {
+	font-size: 3rem;
+	color: var(--primary);
+}
+
+.list-item {
+	font-size: 1.8rem;
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+	line-height: 1.2;
+}
+
+*:focus {
+	outline: none;
+	box-shadow: 0 0 0 0.5rem var(--primary-trans-05);
+}
+
+/* HELPER CLASSES */
+
+.center-text {
+	text-align: center;
+}
+
+.margin-right-sm {
+	margin-right: 1.6rem !important;
+}
+
+.margin-bottom-md {
+	margin-bottom: 4.8rem !important;
+}
+
+.grid {
+	display: grid;
+	column-gap: 6.4rem;
+	row-gap: 9.6rem;
+}
+
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+
+.grid:not(:last-child) {
+	margin-bottom: 9.6rem;
+}
+
+.grid--center-v {
+	align-items: center;
+}
+
+.grid--2-cols {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+strong {
+	font-weight: 500;
+}
